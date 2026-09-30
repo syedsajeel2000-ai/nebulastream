@@ -13,9 +13,12 @@
     "db:seed": "node scripts/db-seed.ts"
   },
   "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "@libsql/core": "^0.18.0",
     "@tailwindcss/postcss": "^4.3.3",
     "better-sqlite3": "^12.4.1",
     "framer-motion": "^13.4.5",
+    "libsql": "^0.5.29",
     "next": "^15.5.26",
     "react": "19.1.0",
     "react-dom": "19.1.0",

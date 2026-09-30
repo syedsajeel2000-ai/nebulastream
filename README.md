@@ -96,7 +96,12 @@ Copy `.env.example` → `.env.local` and set:
 - `SESSION_SECRET` — HMAC secret for session tokens. Generate with
   `node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"`.
   (A dev fallback keeps the app runnable without it; **always set it in production**.)
-- `NEBULA_DATA_DIR` *(optional)* — directory for the SQLite file (default `./data`).
+- `NEBULA_DATA_DIR` *(optional)* — directory for the SQLite file (default `./data`; `/tmp/nebula-data` on Vercel).
+- `TURSO_DATABASE_URL` + `TURSO_AUTH_TOKEN` *(optional)* — Turso cloud database. When set, the local
+  SQLite file becomes an **embedded replica**: reads stay local, writes replicate to Turso so accounts,
+  watchlists and history **persist across serverless cold starts**. Create one via the Turso integration
+  on Vercel (`vercel install turso/database`) — it sets both variables for you — or with the Turso CLI.
+  Unset = plain local SQLite file.
 
 No API keys are required — artwork is proxied server-side via `/api/art`, and every video is a full-length public-domain or Creative-Commons film/episode hosted by the Internet Archive (streamed with HTTP range requests, so seeking works).
 
@@ -121,7 +126,13 @@ uses the modern-only 2016–2026 selection per project direction).
 ## 🗄️ Database
 
 SQLite file at `data/nebula.db` (WAL mode, `foreign_keys = ON`). Migrations run automatically on first boot
-(`PRAGMA user_version` tracks the schema version).
+(`PRAGMA user_version` tracks the schema version; on Turso replicas a `_nebula_meta` table is used instead,
+since remote databases reject PRAGMA writes).
+
+On Vercel the database is a **Turso cloud DB with embedded replicas** (`@libsql`'s better-sqlite3-compatible
+driver): every serverless instance keeps a local read copy in `/tmp`, writes go to the Turso primary and
+replicate back — data survives cold starts and is shared across instances. The database auto-migrates and
+auto-seeds itself on first boot (empty → seeded).
 
 ```
 users ─┬─< profiles ─┬─< watch_history >─┬─< content ─< episodes

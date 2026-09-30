@@ -286,25 +286,28 @@ export function seed(): void {
     return;
   }
 
-  const insertContent = db.prepare(
-    `INSERT INTO content (title, description, type, genre, release_year, duration, rating,
-                          poster, backdrop, trailer_url, video_url, featured, trending, license)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-  );
-  const insertCast = db.prepare(
-    "INSERT INTO cast_members (content_id, name, role, sort_order) VALUES (?, ?, ?, ?)"
-  );
-  const insertEpisode = db.prepare(
-    `INSERT INTO episodes (content_id, season_number, episode_number, title, description, duration, video_url)
-     VALUES (?, ?, ?, ?, ?, ?, ?)`
-  );
-
   const poster = (title: string) =>
     `https://picsum.photos/seed/${encodeURIComponent(title)}/342/513`;
   const backdrop = (title: string) =>
     `https://picsum.photos/seed/${encodeURIComponent(title)}-bd/1280/720`;
 
+  // NOTE: statements must be prepared INSIDE the transaction — libsql embedded
+  // replicas implicitly commit a transaction when a statement prepared outside
+  // it is executed (better-sqlite3 has no such behavior; harmless there).
   const run = db.transaction(() => {
+    const insertContent = db.prepare(
+      `INSERT INTO content (title, description, type, genre, release_year, duration, rating,
+                          poster, backdrop, trailer_url, video_url, featured, trending, license)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    );
+    const insertCast = db.prepare(
+      "INSERT INTO cast_members (content_id, name, role, sort_order) VALUES (?, ?, ?, ?)"
+    );
+    const insertEpisode = db.prepare(
+      `INSERT INTO episodes (content_id, season_number, episode_number, title, description, duration, video_url)
+       VALUES (?, ?, ?, ?, ?, ?, ?)`
+    );
+
     for (const item of CATALOG) {
       const info = insertContent.run(
         item.title,

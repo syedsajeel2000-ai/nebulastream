@@ -1,22 +1,62 @@
 import Database from "better-sqlite3";
+import LibsqlDatabase from "libsql";
 import fs from "node:fs";
 import path from "node:path";
-
 /**
  * SQLite (better-sqlite3) — the single source of truth for all app data.
  *
  * - WAL journal + NORMAL sync: durable yet fast for a Next.js server process.
  * - foreign_keys enforced on every connection (referential integrity).
  * - Prepared statements everywhere (SQL-injection safe, fast).
+ *
+ * Serverless / persistent mode: when TURSO_DATABASE_URL + TURSO_AUTH_TOKEN are
+ * set, the local file becomes an **embedded replica** of a Turso cloud DB —
+ * reads are served from disk, writes are forwarded to the remote primary and
+ * replicated back. This keeps the whole synchronous better-sqlite3-style API
+ * while persisting data across serverless cold starts (e.g. Vercel).
  */
 
-const DATA_DIR = process.env.NEBULA_DATA_DIR ?? path.join(process.cwd(), "data");
+const DATA_DIR =
+  process.env.NEBULA_DATA_DIR ??
+  // Serverless filesystems are read-only except /tmp.
+  (process.env.VERCEL ? "/tmp/nebula-data" : path.join(process.cwd(), "data"));
 
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 
 export const DB_PATH = path.join(DATA_DIR, "nebula.db");
 
+const TURSO_URL = process.env.TURSO_DATABASE_URL;
+const TURSO_TOKEN = process.env.TURSO_AUTH_TOKEN;
+const USING_REMOTE = Boolean(TURSO_URL && TURSO_TOKEN);
+
 function createConnection(): Database.Database {
+  if (USING_REMOTE) {
+    // libsql's Database is API-compatible with better-sqlite3's (sync API);
+    // its Options type omits authToken, and its class type differs slightly
+    // from better-sqlite3's, hence the casts.
+    const db = new LibsqlDatabase(DB_PATH, {
+      syncUrl: TURSO_URL,
+      authToken: TURSO_TOKEN,
+      syncPeriod: 0,
+    } as unknown as LibsqlDatabase.Options) as unknown as Database.Database;
+    db.pragma("foreign_keys = ON");
+    // Pull remote state down before any query runs (migrate/seed rely on it).
+    // Retry: cold-start syncs occasionally hit transient network errors.
+    const syncFn = (db as unknown as { sync(): void }).sync.bind(db);
+    for (let attempt = 1; ; attempt++) {
+      try {
+        syncFn();
+        break;
+      } catch (e) {
+        if (attempt >= 3) throw e;
+        const waitMs = 500 * attempt;
+        console.warn(`[nebula] replica sync attempt ${attempt} failed, retrying in ${waitMs}ms`);
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, waitMs);
+      }
+    }
+    return db;
+  }
+
   const db = new Database(DB_PATH);
   db.pragma("journal_mode = WAL");
   db.pragma("synchronous = NORMAL");
@@ -148,11 +188,7 @@ const MIGRATIONS: Record<number, string[]> = {
 };
 
 export function migrate(target = SCHEMA_VERSION): void {
-  const row = db
-    .prepare<[], { user_version: number }>("PRAGMA user_version")
-    .get();
-  const current = row?.user_version ?? 0;
-
+  const current = schemaVersion();
   if (current >= target) return;
 
   const run = db.transaction(() => {
@@ -161,9 +197,46 @@ export function migrate(target = SCHEMA_VERSION): void {
       if (!statements) continue;
       for (const sql of statements) db.exec(sql);
     }
-    db.pragma(`user_version = ${target}`);
+    setSchemaVersion(target);
   });
   run();
+}
+
+/**
+ * Schema version. Stored in PRAGMA user_version locally, but in a real table
+ * when connected to a remote Turso DB (which rejects PRAGMA writes).
+ */
+function schemaVersion(): number {
+  if (USING_REMOTE) {
+    const exists = db
+      .prepare(
+        "SELECT COUNT(*) n FROM sqlite_master WHERE type='table' AND name='_nebula_meta'"
+      )
+      .get() as { n: number };
+    if (!exists.n) return 0;
+    const row = db
+      .prepare("SELECT value FROM _nebula_meta WHERE key = 'schema_version'")
+      .get() as { value?: string } | undefined;
+    return Number(row?.value ?? 0);
+  }
+  const row = db
+    .prepare<[], { user_version: number }>("PRAGMA user_version")
+    .get();
+  return row?.user_version ?? 0;
+}
+
+function setSchemaVersion(v: number): void {
+  if (USING_REMOTE) {
+    db.exec(
+      `CREATE TABLE IF NOT EXISTS _nebula_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`
+    );
+    db.prepare(
+      "INSERT INTO _nebula_meta (key, value) VALUES ('schema_version', ?) " +
+        "ON CONFLICT(key) DO UPDATE SET value = excluded.value"
+    ).run(String(v));
+    return;
+  }
+  db.pragma(`user_version = ${v}`);
 }
 
 migrate();
@@ -172,6 +245,7 @@ migrate();
  * Auto-seed an empty database (fresh deploy / fresh volume).
  * Keeps `npm run db:seed` for manual use; this just guarantees the catalog
  * exists on first boot (e.g. Vercel) without extra setup steps.
+ * The seed itself is guarded against double-seeding via demo-user uniqueness.
  */
 if (
   process.env.NEBULA_AUTO_SEED !== "0" &&
@@ -180,7 +254,10 @@ if (
   // Import lazily so this module has no hard dependency on the seed module.
   import("./seed.ts")
     .then((m) => m.seed())
-    .then(() => console.log("[nebula] auto-seeded empty database"))
+    .then(() => {
+      if (USING_REMOTE) (db as unknown as { sync(): void }).sync();
+      console.log("[nebula] auto-seeded empty database");
+    })
     .catch((e) => console.error("[nebula] auto-seed failed:", e));
 }
 
