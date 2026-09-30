@@ -28,3 +28,8 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Local agent/tooling metadata (not part of the project)
+.freebuff/
+.agents/
+skills-lock.json
