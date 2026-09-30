@@ -1,0 +1,378 @@
+{
+ "found": {
+  "All Quiet on the Western Front": [],
+  "Bataan": [
+   {
+    "id": "bataan_202401",
+    "title": "Bataan 1943",
+    "year": "",
+    "file": "bataan.mp4",
+    "len": "6857.44",
+    "rights": ""
+   },
+   {
+    "id": "Bataan_Corregidor_Memorial_Bridge_Dedication",
+    "title": "Bataan Corregidor Memorial Bridge Dedication",
+    "year": "2013",
+    "file": "Bataan_Corregidor_Memorial_Bridge_Dedication.mp4",
+    "len": "2163.17",
+    "rights": ""
+   }
+  ],
+  "Sands of Iwo Jima": [],
+  "Guadalcanal Diary": [],
+  "Wake Island": [
+   {
+    "id": "WakeIslandAlamoOfThePacific2003",
+    "title": "Wake Island; Alamo Of The Pacific",
+    "year": 2003,
+    "file": "Wake Island; Alamo of the Pacific (2003).mp4",
+    "len": "5358.96",
+    "rights": "http://creativecommons.org/publicdomain/mark/1.0/"
+   },
+   {
+    "id": "wake-island-1942_202503",
+    "title": "Wake Island (1942)",
+    "year": 2025,
+    "file": "Wake Island (1942).mp4",
+    "len": "5265.13",
+    "rights": ""
+   }
+  ],
+  "The Fighting 69th": [],
+  "Zulu": [
+   {
+    "id": "zulu-1964-full-movie",
+    "title": "Zulu (1964) [Full Movie]",
+    "year": "1964",
+    "file": "Zulu (1964)  [Full Movie].mp4",
+    "len": "8301.72",
+    "rights": ""
+   }
+  ],
+  "Metropolis": [
+   {
+    "id": "metropolis-1927-bdrip-1080p-x-265-dts-hd-ma-5.1-d-0ct-0r-lew-sev",
+    "title": "Metropolis (1927)",
+    "year": 1927,
+    "file": "Metropolis 1927 BDrip 1080p x265 DTS-HD MA 5.1 D0ct0rLew[SEV].mp4",
+    "len": "8997.55",
+    "rights": "https://creativecommons.org/publicdomain/mark/1.0/"
+   },
+   {
+    "id": "metropolis-1927-giorgio-moroders-edition-1080p-blu-ray-remux-avc-dts-hd-ma-5.1",
+    "title": "Metropolis ( 1927) Giorgio Moroder's Edition 1080p Blu Ray Remux AVC D",
+    "year": 1927,
+    "file": "Metropolis (1927)/Metropolis (1927) Giorgio Moroder's Edition 1080p Blu-ray Remux AVC DTS-HD MA 5.1.mp4",
+    "len": "4990.24",
+    "rights": ""
+   },
+   {
+    "id": "metropolis_202511",
+    "title": "Metropolis",
+    "year": 1927,
+    "file": "Metropolis .mp4",
+    "len": "8907.89",
+    "rights": ""
+   },
+   {
+    "id": "metropolis-1927-full-movie-4-k-color-remastered-2023-colorized-with-gottfried-huppertz-score",
+    "title": "Metropolis ( 1927) Full Movie 4 K Color Remastered 2023 Colorized With",
+    "year": 1927,
+    "file": "Metropolis (1927) Full Movie _ 4K Color Remastered_ 2023 Colorized with Gottfried Huppertz Score.mp4",
+    "len": "8723.32",
+    "rights": ""
+   },
+   {
+    "id": "metropolis-1927-english-titles",
+    "title": "Metropolis 1927 English Titles",
+    "year": 1927,
+    "file": "Metropolis-1927-EnglishTitles.mp4",
+    "len": "8937.14",
+    "rights": "https://creativecommons.org/publicdomain/mark/1.0/"
+   },
+   {
+    "id": "metropolis-1927-with-16mm-shots-re-framed-and-gottfried-huppertz-score",
+    "title": "Metropolis (1927) With 16mm Shots Re-Framed And Gottfried Huppertz Sco",
+    "year": 1927,
+    "file": "Metropolis (1927) with 16mm Shots Re-framed and Gottfried Huppertz Score.mp4",
+    "len": "8900.59",
+    "rights": ""
+   },
+   {
+    "id": "metropolis-lang",
+    "title": "Metropolis (1927)",
+    "year": 1927,
+    "file": "Metropolis (1927) GBR Eureka Bluray.mp4",
+    "len": "9001.42",
+    "rights": ""
+   },
+   {
+    "id": "metropolis-1927_202511",
+    "title": "\"Metropolis\" by Fritz Lang (1927)",
+    "year": 1927,
+    "file": "Metropolis 1927.mp4",
+    "len": "9011.25",
+    "rights": "https://creativecommons.org/publicdomain/mark/1.0/"
+   },
+   {
+    "id": "metropolis-1927-4-k-u-rnemls-bwry",
+    "title": "Metropolis (1927) 4K",
+    "year": 1927,
+    "file": "Metropolis (1927) 4K [uRNEmlsBWRY].mp4",
+    "len": "8695.6",
+    "rights": "https://creativecommons.org/publicdomain/zero/1.0/"
+   },
+   {
+    "id": "metropolis-1927-trans-humanism-movie",
+    "title": "Metropolis , 1927 Trans Humanism Movie",
+    "year": 1927,
+    "file": "Metropolis , 1927 TransHumanism Movie.mp4",
+    "len": "8832.22",
+    "rights": ""
+   }
+  ]
+ },
+ "rights": {
+  "attack-1956": {
+   "title": "Attack! (1956)",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Drama,War,World War II,Action",
+   "rating": ""
+  },
+  "Gung_Ho": {
+   "title": "Gung Ho!",
+   "year": "1943",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Drama; History; War",
+   "rating": ""
+  },
+  "We_Dive_at_Dawn_1943": {
+   "title": "We Dive at Dawn",
+   "year": "1943",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "war; WWII; submarine",
+   "rating": ""
+  },
+  "In_Which_We_Serve": {
+   "title": "In Which We Serve",
+   "year": "1942",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "War; WWII; WW2; Drama; Propaganda",
+   "rating": ""
+  },
+  "BloodontheSun": {
+   "title": "Blood on the Sun",
+   "year": "1945",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Action; Drama; War; Romance; James Cagney",
+   "rating": ""
+  },
+  "BattleofBloodIsland": {
+   "title": "Battle of Blood Island",
+   "year": "1960",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Drama; War",
+   "rating": ""
+  },
+  "Drums_in_the_Deep_South": {
+   "title": "Drums in the Deep South",
+   "year": "1951",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "war;civil war;war between the states;",
+   "rating": ""
+  },
+  "they_raid_by_night": {
+   "title": "They Raid By Night",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Drama;War",
+   "rating": ""
+  },
+  "TheMemphisBelleAStoryofaFlyingFortress": {
+   "title": "The Memphis Belle: A Story of a Flying Fortress",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "WWII; war; documentary; b17",
+   "rating": ""
+  },
+  "BattleshipPotemkin": {
+   "title": "Bronenosets Potyomkin (Battleship Potemkin)",
+   "year": "1925",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "silent_films,feature_films,moviesandfilms",
+   "subject": "Silent; Drama; History;  War",
+   "rating": ""
+  },
+  "princess_iron_fan": {
+   "title": "Princess Iron Fan (鐵扇公主)",
+   "year": "1941",
+   "rights": "In accordance with Chinese law, the copyright for this movie expired in 1991, 50 years after it was published.",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "China;Animation",
+   "rating": ""
+  },
+  "mr_bug_goes_to_town": {
+   "title": "Mr Bug Goes to Town (1941) • in HD 720 - with MKV",
+   "rights": "<a href=\"https://archive.org/download/metadata-repo/Fair%20Use%20Notice.pdf\" rel=\"ugc nofollow\">Fair Use Notice</a>",
+   "licenseurl": "",
+   "collections": "opensource_movies",
+   "subject": "Fleischer Studios;MKV;HD 720,Paramount Pictures,Animation",
+   "rating": ""
+  },
+  "the-adventures-of-mark-twain-1985_film": {
+   "title": "The Adventures Of Mark Twain (1985)",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "opensource_movies,community",
+   "subject": "movie",
+   "rating": ""
+  },
+  "TheFastandtheFuriousJohnIreland1954goofyrip": {
+   "title": "The Fast And The Furious",
+   "year": "1955",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "drag Racing; action;",
+   "rating": ""
+  },
+  "CaptainKidd_": {
+   "title": "Captain Kidd",
+   "year": "1945",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Action; Drama; Adventure; Charles Laughton",
+   "rating": ""
+  },
+  "JungleBook": {
+   "title": "Jungle Book",
+   "year": "1942",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Fantasy; Action; Adventure; Sabu Dastagir;pdmovies",
+   "rating": ""
+  },
+  "hot_rod_girl_1956": {
+   "title": "Hot Rod Girl",
+   "year": "1956",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "Action; Drama; Romance",
+   "rating": ""
+  },
+  "BillytheKidReturns": {
+   "title": "Billy the Kid Returns",
+   "year": "1938",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+   "collections": "Comedy_Films,feature_films,moviesandfilms",
+   "subject": "Action; Comedy; Western; Roy Rogers",
+   "rating": ""
+  },
+  "TheThiefOfBagdad1924": {
+   "title": "The Thief of Bagdad (1924)",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "collections": "opensource_movies,community",
+   "subject": "Douglas Fairbanks; Silent; Fantasy; Arabian Nights",
+   "rating": ""
+  },
+  "the-mark-of-zorro-1920": {
+   "title": "The Mark Of Zorro (1920)",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "silent_films,feature_films,moviesandfilms",
+   "subject": "Filme Completo,Legendado,Silent Movie",
+   "rating": ""
+  },
+  "the-black-pirate-1926": {
+   "title": "The Black Pirate",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "feature_films_unsorted,feature_films,moviesandfilms",
+   "subject": "The Black Pirate,Action,Adventure",
+   "rating": ""
+  },
+  "TheLostWorld1925": {
+   "title": "The Lost World 1925",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "collections": "opensource_movies,community",
+   "subject": "Silent,Arthur Conan Doyle",
+   "rating": ""
+  },
+  "spring_blenderopenmovie": {
+   "title": "Spring - Blender Open Movie",
+   "rights": "",
+   "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+   "collections": "opensource_movies,community",
+   "subject": "blender,org,open movie,spring",
+   "rating": ""
+  },
+  "sprite-fright-2021": {
+   "title": "Sprite Fright ( 2021)",
+   "year": "2021",
+   "rights": "",
+   "licenseurl": "https://creativecommons.org/licenses/by/4.0/",
+   "collections": "opensource_movies,community",
+   "subject": "Blender,Animation,Short,Film,Open Movie",
+   "rating": ""
+  },
+  "charge-blender-open-movie-1608p": {
+   "title": "Charge: Blender Open Movie",
+   "year": "2022",
+   "rights": "",
+   "licenseurl": "",
+   "collections": "opensource_movies,community",
+   "subject": "short film,3D  animation,action",
+   "rating": ""
+  },
+  "agent327operationbarbershop": {
+   "title": "Agent 327 - Operation Barbershop",
+   "year": "2017",
+   "rights": "All rights to the video belong to the Blender Foundation.",
+   "licenseurl": "https://creativecommons.org/licenses/by-nd/4.0/",
+   "collections": "opensource_movies,community",
+   "subject": "animated,spy,agent,agent 327,blender,blender foundation,blender animation studios,open movie",
+   "rating": ""
+  },
+  "wing_it": {
+   "title": "Wing It! - Blender Open Movie (2023)",
+   "rights": "",
+   "licenseurl": "https://creativecommons.org/licenses/by/4.0/",
+   "collections": "opensource_movies",
+   "subject": "Blender,Open Movie,Animation,CC-BY,2D-3D Hybrid",
+   "rating": ""
+  },
+  "coffee-run": {
+   "title": "Coffee Run",
+   "rights": "",
+   "licenseurl": "https://creativecommons.org/licenses/by-nd/4.0/",
+   "collections": "opensource_movies",
+   "subject": "Coffee Run,Blender,Blender Animation Studio,Blender Foundation,Open Movie,3D Animation,Animated Short,CGI",
+   "rating": ""
+  }
+ }
+}

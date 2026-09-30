@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+build/
+next-env.d.ts
+
+# Environment — never commit secrets
+.env
+.env.local
+.env.*.local
+
+# SQLite data (contains user records)
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# TypeScript
+*.tsbuildinfo

@@ -1,0 +1,341 @@
+{
+ "films": {
+  "Spring": {
+   "id": "spring_blenderopenmovie",
+   "file": "Spring - Blender Open Movie - YouTube.mp4",
+   "secs": 464
+  },
+  "Sprite Fright": {
+   "id": "sprite-fright-2021",
+   "file": "Sprite Fright (2021).mp4",
+   "secs": 630
+  },
+  "Charge": {
+   "id": "charge-blender-open-movie-1608p",
+   "file": "Charge - Blender Open Movie 1608p.mp4",
+   "secs": 263
+  },
+  "Agent 327": {
+   "id": "agent327operationbarbershop",
+   "file": "agent327-1080.mp4",
+   "secs": 232
+  },
+  "Wing It!": {
+   "id": "wing_it",
+   "file": "wing_it.mp4",
+   "secs": 238
+  },
+  "Coffee Run": {
+   "id": "coffee-run",
+   "file": "Coffee Run.mp4",
+   "secs": 185
+  },
+  "Princess Iron Fan": {
+   "id": "princess_iron_fan",
+   "file": "princess_iron_fan_512kb.mp4",
+   "secs": 4367
+  },
+  "Mr. Bug Goes to Town": {
+   "id": "mr_bug_goes_to_town",
+   "file": "mr_bug_goes_to_town.mp4",
+   "secs": 4651
+  },
+  "Bataan": {
+   "id": "bataan_202401",
+   "file": "bataan.mp4",
+   "secs": 6857
+  },
+  "Wake Island": {
+   "id": "wake-island-1942_202503",
+   "file": "Wake Island (1942).mp4",
+   "secs": 5265
+  },
+  "Gung Ho!": {
+   "id": "Gung_Ho",
+   "file": "Gung_Ho_512kb.mp4",
+   "secs": 5160
+  },
+  "We Dive at Dawn": {
+   "id": "We_Dive_at_Dawn_1943",
+   "file": "We_Dive_at_Dawn_512kb.mp4",
+   "secs": 5578
+  },
+  "In Which We Serve": {
+   "id": "In_Which_We_Serve",
+   "file": "In_Which_We_Serve_512kb.mp4",
+   "secs": 6569
+  },
+  "Blood on the Sun": {
+   "id": "BloodontheSun",
+   "file": "BloodontheSun_512kb.mp4",
+   "secs": 5614
+  },
+  "Attack!": {
+   "id": "attack-1956",
+   "file": "Attack! (1956).mp4",
+   "secs": 6455
+  },
+  "Drums in the Deep South": {
+   "id": "Drums_in_the_Deep_South",
+   "file": "DrumsInTheDeepSouth.mp4",
+   "secs": 5168
+  },
+  "Zulu": {
+   "id": "zulu-1964-full-movie",
+   "file": "Zulu (1964)  [Full Movie].mp4",
+   "secs": 8302
+  },
+  "The Memphis Belle: A Story of a Flying Fortress": {
+   "id": "TheMemphisBelleAStoryofaFlyingFortress",
+   "file": "Memphis.BelleTheA.Story.Of.A.Flying.Fortress.1944_512kb.mp4",
+   "secs": 2490
+  },
+  "Metropolis": {
+   "id": "metropolis-lang",
+   "file": "Metropolis (1927) GBR Eureka Bluray.mp4",
+   "secs": 9001
+  },
+  "The Thief of Bagdad": {
+   "id": "TheThiefOfBagdad1924",
+   "file": "TOB1924-512.mp4",
+   "secs": 8422
+  },
+  "The Mark of Zorro": {
+   "id": "the-mark-of-zorro-1920",
+   "file": "The Mark Of Zorro (1920).mp4",
+   "secs": 6425
+  },
+  "The Black Pirate": {
+   "id": "the-black-pirate-1926",
+   "file": "The Black Pirate 1926.mp4",
+   "secs": 5575
+  },
+  "The Lost World": {
+   "id": "TheLostWorld1925",
+   "file": "TheLostWorld1925_256.mp4",
+   "secs": 5506
+  },
+  "The Fast and the Furious": {
+   "id": "TheFastandtheFuriousJohnIreland1954goofyrip",
+   "file": "TheFastandtheFuriousJohnIreland1954goofyrip_512kb.mp4",
+   "secs": 4356
+  },
+  "Captain Kidd": {
+   "id": "CaptainKidd_",
+   "file": "CaptainKidd_512kb.mp4",
+   "secs": 5321
+  },
+  "Jungle Book": {
+   "id": "JungleBook",
+   "file": "Jungle_Book_512kb.mp4",
+   "secs": 6295
+  }
+ },
+ "iaTrailers": {
+  "The General": {
+   "id": "turner_video_18",
+   "file": "18.mp4",
+   "secs": 64
+  },
+  "His Girl Friday": {
+   "id": "his-girl-friday_20210811",
+   "file": "His Girl Friday.mp4",
+   "secs": 171
+  },
+  "House on Haunted Hill": {
+   "id": "sinema-trailer_house-on-haunted-hill",
+   "file": "Trailer - House On Haunted Hill (1959) (480p_24fps_H264-128kbit_AAC).mp4",
+   "secs": 105
+  },
+  "Night of the Living Dead": {
+   "id": "NightOfTheLivingDeadTrailer",
+   "file": "NightLivingDeadTrailer_512kb.mp4",
+   "secs": 95
+  },
+  "Carnival of Souls": {
+   "id": "CarnivalOfSoulsTrailer",
+   "file": "CarnivalOfSouls-Trailer.mp4",
+   "secs": 138
+  },
+  "Detour": {
+   "id": "movie-trailer-detour-1945-film-noir-cult-classic",
+   "file": "Movie Trailer_ Detour (1945) -film noir cult classic.mp4",
+   "secs": 76
+  },
+  "Suddenly": {
+   "id": "suddenly-1954-movie-trailer-frank-sinatra-sterling-hayden",
+   "file": "Suddenly (1954) Movie Trailer - Frank Sinatra, Sterling Hayden.mp4",
+   "secs": 121
+  },
+  "D.O.A.": {
+   "id": "1950.-d.-o.-a.-trailer",
+   "file": "1950. D.O.A. (trailer).mp4",
+   "secs": 151
+  },
+  "The Stranger": {
+   "id": "turner_video_119",
+   "file": "119.mp4",
+   "secs": 113
+  },
+  "The Last Man on Earth": {
+   "id": "sinema-trailer_the-last-man-on-earth",
+   "file": "_The Last Man On Earth_ Trailer (240p_30fps_H264-96kbit_AAC).mp4",
+   "secs": 107
+  },
+  "The Little Princess": {
+   "id": "the-little-princess-1939-trailer",
+   "file": "The Little Princess (1939) - Trailer.mp4",
+   "secs": 149
+  },
+  "Nosferatu": {
+   "id": "NosferatuRestorationTrailer",
+   "file": "NosferatuRestorationTrailer.mp4",
+   "secs": 60
+  },
+  "Gulliver's Travels": {
+   "id": "GulliversTravels1939Trailer",
+   "file": "GulliversTravels-Original1939TheatricalTrailer.mp4",
+   "secs": 143
+  },
+  "The Brain That Wouldn't Die": {
+   "id": "TheBrainThatWouldntDie_234",
+   "file": "ThebrainthatWouldntdie.mp4",
+   "secs": 106
+  },
+  "Angel and the Badman": {
+   "id": "turner_video_102103",
+   "file": "102103.mp4",
+   "secs": 79
+  },
+  "Made for Each Other": {
+   "id": "made-for-each-other-1939-orignal-trailer-hq",
+   "file": "Made for Each Other (1939) ORIGNAL TRAILER [HQ].mp4",
+   "secs": 126
+  },
+  "Assignment Outer Space": {
+   "id": "turner_video_11629",
+   "file": "11629.mp4",
+   "secs": 80
+  },
+  "The Phantom Planet": {
+   "id": "ThePhantomPlanetTrailer_201802",
+   "file": "ThePhantomPlanetTrailer.mp4",
+   "secs": 165
+  },
+  "Penny Serenade": {
+   "id": "turner_video_80",
+   "file": "80.mp4",
+   "secs": 81
+  },
+  "The Wasp Woman": {
+   "id": "MovieTrailerTheWaspWoman1959",
+   "file": "Movie Trailer - The Wasp Woman (1959).mp4",
+   "secs": 90
+  },
+  "Attack of the Giant Leeches": {
+   "id": "attack_of_the_giant_leeches_trailer",
+   "file": "Attack_of_the_Giant_Leeches_Trailer_512kb.mp4",
+   "secs": 81
+  },
+  "The Giant Gila Monster": {
+   "id": "TheGiantGilaMonster-Trailer",
+   "file": "TheGiantGilaMonster.mp4",
+   "secs": 99
+  },
+  "Teenagers from Outer Space": {
+   "id": "TeenagersFromOuterSpaceTrailer",
+   "file": "TeenagersFromOuterSpaceTrailer.mp4",
+   "secs": 96
+  },
+  "Big Buck Bunny": {
+   "id": "big-buck-bunny-trailer",
+   "file": "Big-buck-bunny_trailer.mp4",
+   "secs": 33
+  },
+  "Elephants Dream": {
+   "id": "Elephants_Dream_teaser_2",
+   "file": "elephantsdream_teaser.mp4",
+   "secs": 75
+  },
+  "Sintel": {
+   "id": "sintel-movie-trailer",
+   "file": "Sintel Movie Trailer.mp4",
+   "secs": 123
+  },
+  "Bataan": {
+   "id": "BataanTrailer",
+   "file": "BataanTrailer.mp4",
+   "secs": 135
+  },
+  "Wake Island": {
+   "id": "WakeIslandTrailer",
+   "file": "WakeIslandTrailer.mp4",
+   "secs": 128
+  },
+  "Gung Ho!": {
+   "id": "BugsBunny-WarBonds",
+   "file": "FILE0445_512kb.mp4",
+   "secs": 76
+  },
+  "In Which We Serve": {
+   "id": "turner_video_11519",
+   "file": "11519.mp4",
+   "secs": 73
+  },
+  "Blood on the Sun": {
+   "id": "turner_video_11531",
+   "file": "11531.mp4",
+   "secs": 356
+  },
+  "Drums in the Deep South": {
+   "id": "turner_video_11562",
+   "file": "11562.mp4",
+   "secs": 274
+  },
+  "Zulu": {
+   "id": "zulu_20211129",
+   "file": "Zulu.mp4",
+   "secs": 222
+  },
+  "Metropolis": {
+   "id": "MetropolisRestorationTrailer",
+   "file": "MetropolisRestorationTrailer.mp4",
+   "secs": 121
+  },
+  "The Thief of Bagdad": {
+   "id": "turner_video_11482",
+   "file": "11482.mp4",
+   "secs": 148
+  },
+  "The Mark of Zorro": {
+   "id": "turner_video_17740",
+   "file": "17740.mp4",
+   "secs": 123
+  },
+  "The Lost World": {
+   "id": "turner_video_11",
+   "file": "11.mp4",
+   "secs": 194
+  },
+  "The Fast and the Furious": {
+   "id": "turner_video_11577",
+   "file": "11577.mp4",
+   "secs": 106
+  },
+  "Captain Kidd": {
+   "id": "captain-kidd-trailer",
+   "file": "Captain Kidd Modern Trailer.mp4",
+   "secs": 33
+  },
+  "Jungle Book": {
+   "id": "jungle_book",
+   "file": "jungle_book_512kb.mp4",
+   "secs": 138
+  },
+  "Mr. Bug Goes to Town": {
+   "id": "turner_video_19103",
+   "file": "19103.mp4",
+   "secs": 129
+  }
+ }
+}

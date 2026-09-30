@@ -1,0 +1,35 @@
+{
+  "name": "nebula-stream",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NebulaStream — a Netflix-inspired streaming platform built with Next.js and SQLite",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "db:reset": "node scripts/db-reset.ts",
+    "db:seed": "node scripts/db-seed.ts"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "better-sqlite3": "^12.4.1",
+    "framer-motion": "^13.4.5",
+    "next": "15.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}
