@@ -34,27 +34,60 @@ function createConnection(): Database.Database {
     // libsql's Database is API-compatible with better-sqlite3's (sync API);
     // its Options type omits authToken, and its class type differs slightly
     // from better-sqlite3's, hence the casts.
-    const db = new LibsqlDatabase(DB_PATH, {
-      syncUrl: TURSO_URL,
-      authToken: TURSO_TOKEN,
-      syncPeriod: 0,
-    } as unknown as LibsqlDatabase.Options) as unknown as Database.Database;
-    db.pragma("foreign_keys = ON");
-    // Pull remote state down before any query runs (migrate/seed rely on it).
-    // Retry: cold-start syncs occasionally hit transient network errors.
-    const syncFn = (db as unknown as { sync(): void }).sync.bind(db);
+    const openReplica = () =>
+      new LibsqlDatabase(DB_PATH, {
+        syncUrl: TURSO_URL,
+        authToken: TURSO_TOKEN,
+        syncPeriod: 0,
+      } as unknown as LibsqlDatabase.Options) as unknown as Database.Database;
+
+    const deleteLocalReplicaFiles = (): void => {
+      try {
+        for (const f of fs.readdirSync(DATA_DIR)) {
+          if (f.startsWith("nebula.db")) {
+            try {
+              fs.unlinkSync(path.join(DATA_DIR, f));
+            } catch {
+              /* best effort */
+            }
+          }
+        }
+      } catch {
+        /* dir missing */
+      }
+    };
+
+    // Open + initial sync, with self-healing: a non-replica SQLite file (or
+    // torn replica state) at DB_PATH makes the open/sync fail with
+    // InvalidLocalState — delete the local copy and re-pull from remote.
+    // Transient network failures are retried.
+    let db: Database.Database | null = null;
     for (let attempt = 1; ; attempt++) {
       try {
-        syncFn();
+        db = openReplica();
+        db.pragma("foreign_keys = ON");
+        (db as unknown as { sync(): void }).sync();
         break;
       } catch (e) {
+        const msg = String(e);
+        try {
+          db?.close();
+        } catch {
+          /* already closed */
+        }
+        db = null;
+        if (msg.includes("InvalidLocalState") || msg.includes("metadata file does not")) {
+          console.warn("[nebula] replica state invalid, rebuilding local copy from remote");
+          deleteLocalReplicaFiles();
+          continue;
+        }
         if (attempt >= 3) throw e;
         const waitMs = 500 * attempt;
-        console.warn(`[nebula] replica sync attempt ${attempt} failed, retrying in ${waitMs}ms`);
+        console.warn(`[nebula] replica open/sync attempt ${attempt} failed, retrying in ${waitMs}ms`);
         Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, waitMs);
       }
     }
-    return db;
+    return db as Database.Database;
   }
 
   const db = new Database(DB_PATH);
